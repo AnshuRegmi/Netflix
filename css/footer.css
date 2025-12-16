@@ -1,0 +1,140 @@
+/* ==========================================
+   NETFLIX CLONE - FOOTER STYLES
+   ========================================== */
+
+.footer {
+    background-color: var(--netflix-black);
+    padding: var(--spacing-4xl) 0 var(--spacing-2xl);
+    margin-top: var(--spacing-4xl);
+    border-top: 8px solid var(--netflix-gray-800);
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+}
+
+/* Social Links */
+.footer-social {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--netflix-white);
+    font-size: var(--font-size-xl);
+    border: 2px solid var(--netflix-gray-600);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.social-link:hover {
+    border-color: var(--netflix-white);
+    transform: scale(1.1);
+}
+
+/* Footer Links Grid */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-link {
+    font-size: var(--font-size-sm);
+    color: var(--netflix-gray-400);
+    transition: color var(--transition-base);
+}
+
+.footer-link:hover {
+    color: var(--netflix-white);
+    text-decoration: underline;
+}
+
+/* Service Code Button */
+.service-code-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: transparent;
+    border: 1px solid var(--netflix-gray-600);
+    color: var(--netflix-gray-400);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-2xl);
+    transition: all var(--transition-base);
+}
+
+.service-code-btn:hover {
+    border-color: var(--netflix-white);
+    color: var(--netflix-white);
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: var(--font-size-xs);
+    color: var(--netflix-gray-500);
+    margin-top: var(--spacing-xl);
+}
+
+/* Language Selector */
+.footer-language {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-xl);
+}
+
+.language-select {
+    padding: var(--spacing-sm) var(--spacing-2xl) var(--spacing-sm) var(--spacing-md);
+    background-color: transparent;
+    border: 1px solid var(--netflix-gray-600);
+    color: var(--netflix-gray-400);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    appearance: none;
+}
+
+.language-select:hover {
+    border-color: var(--netflix-white);
+    color: var(--netflix-white);
+}
+
+.language-icon {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.language-arrow {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: var(--font-size-xs);
+}
+
+/* Footer Brand */
+.footer-brand {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-black);
+    color: var(--netflix-red);
+    letter-spacing: -1px;
+    margin-bottom: var(--spacing-lg);
+}

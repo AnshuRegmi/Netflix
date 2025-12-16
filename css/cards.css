@@ -1,0 +1,298 @@
+/* ==========================================
+   NETFLIX CLONE - CONTENT CARDS STYLES
+   ========================================== */
+
+/* Content Section */
+.content-section {
+    position: relative;
+    z-index: 3;
+    padding: var(--spacing-3xl) 0;
+}
+
+.content-row {
+    margin-bottom: var(--spacing-4xl);
+}
+
+.row-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+    padding: 0 var(--content-padding);
+}
+
+.row-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--netflix-white);
+}
+
+.row-link {
+    font-size: var(--font-size-sm);
+    color: var(--netflix-gray-300);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: color var(--transition-base);
+}
+
+.row-link:hover {
+    color: var(--netflix-white);
+}
+
+/* Slider Container */
+.row-slider {
+    position: relative;
+    padding: 0 var(--content-padding);
+    overflow: hidden;
+}
+
+.row-slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    gap: var(--spacing-sm);
+    transition: transform var(--transition-slow) cubic-bezier(0.5, 0, 0.1, 1);
+    will-change: transform;
+    user-select: none;
+}
+
+/* Card - Netflix Poster Style */
+.card {
+    position: relative;
+    flex: 0 0 clamp(140px, 14vw, 200px);
+    aspect-ratio: 2 / 3;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background-color: var(--netflix-gray-800);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform var(--transition-slow);
+}
+
+.card:hover {
+    transform: scale(1.08);
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Card Overlay */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.95) 100%);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: all var(--transition-base);
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    color: var(--netflix-white);
+    line-height: 1.3;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--netflix-gray-300);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-match {
+    color: var(--netflix-green);
+    font-weight: var(--font-weight-bold);
+}
+
+.card-rating {
+    padding: 2px 6px;
+    border: 1px solid var(--netflix-gray-400);
+    border-radius: var(--radius-sm);
+    font-size: 10px;
+}
+
+.card-genres {
+    font-size: var(--font-size-xs);
+    color: var(--netflix-gray-300);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.card-action-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--netflix-black);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.card-action-btn:hover {
+    background-color: var(--netflix-white);
+    transform: scale(1.15);
+}
+
+/* Badges */
+.card-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--netflix-red);
+    color: var(--netflix-white);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    z-index: 2;
+}
+
+.card-badge.new {
+    background-color: var(--netflix-red);
+}
+
+.card-badge.trending {
+    background-color: var(--netflix-yellow);
+    color: var(--netflix-black);
+}
+
+.card-badge.top10 {
+    background-color: var(--netflix-green);
+}
+
+/* Top 10 Number */
+.card-number {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    font-size: 120px;
+    font-weight: var(--font-weight-black);
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* Slider Navigation */
+.slider-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 5;
+    cursor: pointer;
+    left: 0;
+}
+
+.slider-nav.next {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.row-slider:hover .slider-nav {
+    opacity: 1;
+}
+
+.slider-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: var(--radius-full);
+    color: var(--netflix-black);
+    font-size: var(--font-size-lg);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.slider-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.15);
+}
+
+.slider-nav.disabled {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+/* Responsive Cards */
+@media (max-width: 1400px) {
+    .card {
+        flex: 0 0 clamp(130px, 13vw, 190px);
+    }
+}
+
+@media (max-width: 1100px) {
+    .card {
+        flex: 0 0 clamp(120px, 12vw, 170px);
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        flex: 0 0 clamp(110px, 25vw, 150px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 0 clamp(100px, 45vw, 140px);
+    }
+}

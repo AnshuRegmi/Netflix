@@ -1,0 +1,125 @@
+/* ==========================================
+   NETFLIX CLONE - CSS VARIABLES
+   ========================================== */
+
+:root {
+    /* Primary Colors */
+    --netflix-red: #E50914;
+    --netflix-dark-red: #B20710;
+    --netflix-black: #141414;
+    --netflix-dark: #000000;
+    
+    /* Grayscale */
+    --netflix-gray-100: #f3f3f3;
+    --netflix-gray-200: #e5e5e5;
+    --netflix-gray-300: #b3b3b3;
+    --netflix-gray-400: #808080;
+    --netflix-gray-500: #564d4d;
+    --netflix-gray-600: #404040;
+    --netflix-gray-700: #2f2f2f;
+    --netflix-gray-800: #1a1a1a;
+    --netflix-white: #ffffff;
+    
+    /* Accent Colors */
+    --netflix-green: #46d369;
+    --netflix-blue: #0071eb;
+    --netflix-yellow: #e5b109;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+    
+    /* Typography */
+    --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-md: 1.125rem;     /* 18px */
+    --font-size-lg: 1.25rem;      /* 20px */
+    --font-size-xl: 1.5rem;       /* 24px */
+    --font-size-2xl: 2rem;        /* 32px */
+    --font-size-3xl: 2.5rem;      /* 40px */
+    --font-size-4xl: 3rem;        /* 48px */
+    --font-size-5xl: 4rem;        /* 64px */
+    
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Border Radius */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* Z-index Layers */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    
+    /* Layout */
+    --header-height: 70px;
+    --container-max-width: 1920px;
+    --content-padding: 4%;
+    
+    /* Card Dimensions */
+    --card-width: 100%;
+    --card-aspect-ratio: 16 / 9;
+    
+    /* Breakpoints (for JS) */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+}
+
+/* Dark Theme (default) */
+[data-theme="dark"] {
+    --bg-primary: var(--netflix-black);
+    --bg-secondary: var(--netflix-gray-800);
+    --text-primary: var(--netflix-white);
+    --text-secondary: var(--netflix-gray-300);
+}
+
+/* Light Theme (optional) */
+[data-theme="light"] {
+    --bg-primary: var(--netflix-white);
+    --bg-secondary: var(--netflix-gray-100);
+    --text-primary: var(--netflix-black);
+    --text-secondary: var(--netflix-gray-500);
+}
