@@ -16,6 +16,10 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Enhanced smooth scrolling */
+    scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -26,11 +30,20 @@ body {
     color: var(--netflix-white);
     background-color: var(--netflix-black);
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    /* Smooth scrolling for all scrollable elements */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
-body.modal-open {
+body.modal-open,
+body.menu-open {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 /* Typography */
@@ -351,47 +364,47 @@ select {
     visibility: visible;
 }
 
-/* Animations */
+/* Animations - Smooth easing */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes fadeInDown {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes slideInLeft {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(-100%);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes slideInRight {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(100%);
     }
@@ -464,4 +477,74 @@ select {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* ==========================================
+   SMOOTH SCROLLING ENHANCEMENTS
+   ========================================== */
+
+/* Smooth scrolling for all scrollable containers */
+.smooth-scroll,
+.modal-content,
+.slider-wrapper,
+.browse-dropdown,
+.profile-dropdown,
+.notifications-dropdown,
+.header-nav {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling for smoother appearance */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox smooth scrolling */
+@supports (scrollbar-width: thin) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+}
+
+/* GPU acceleration for smooth animations */
+.hero,
+.card,
+.modal,
+.header,
+.trailer-popup-content {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Smooth transitions for interactive elements */
+a, button, .card, .nav-link, .hero-btn, .card-action-btn {
+    transition: all var(--transition-smooth);
 }

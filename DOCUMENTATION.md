@@ -878,6 +878,9 @@ This project is for educational purposes only. Netflix is a registered trademark
 
 ---
 
+<p align="center">
+  Made with ❤️ for learning purposes
+</p>
 
 <p align="center">
   <a href="#netflix-clone---complete-project-documentation">Back to Top</a>

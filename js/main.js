@@ -22,7 +22,10 @@ const Header = {
     searchBtn: null,
     searchInput: null,
     searchBox: null,
+    mobileMenuToggle: null,
+    headerNav: null,
     isSearchOpen: false,
+    isMobileMenuOpen: false,
     lastScrollTop: 0,
 
     init: function() {
@@ -30,11 +33,70 @@ const Header = {
         this.searchBtn = document.getElementById('searchBtn');
         this.searchInput = document.getElementById('searchInput');
         this.searchBox = document.querySelector('.search-box');
+        this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        this.headerNav = document.getElementById('headerNav');
         
         if (!this.header) return;
 
         this.setupEventListeners();
         this.setupScrollBehavior();
+        this.setupMobileMenu();
+    },
+
+    setupMobileMenu: function() {
+        if (!this.mobileMenuToggle || !this.headerNav) return;
+        
+        // Toggle mobile menu
+        this.mobileMenuToggle.addEventListener('click', () => {
+            this.toggleMobileMenu();
+        });
+        
+        // Close mobile menu when clicking a nav link
+        const navLinks = this.headerNav.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeMobileMenu();
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (this.isMobileMenuOpen && 
+                !this.headerNav.contains(e.target) && 
+                !this.mobileMenuToggle.contains(e.target)) {
+                this.closeMobileMenu();
+            }
+        });
+        
+        // Close mobile menu on window resize (if switching to desktop)
+        window.addEventListener('resize', Utils.debounce(() => {
+            if (window.innerWidth > 991 && this.isMobileMenuOpen) {
+                this.closeMobileMenu();
+            }
+        }, 250));
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.isMobileMenuOpen) {
+                this.closeMobileMenu();
+            }
+        });
+    },
+
+    toggleMobileMenu: function() {
+        this.isMobileMenuOpen = !this.isMobileMenuOpen;
+        this.mobileMenuToggle.classList.toggle('active', this.isMobileMenuOpen);
+        this.headerNav.classList.toggle('active', this.isMobileMenuOpen);
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = this.isMobileMenuOpen ? 'hidden' : '';
+    },
+
+    closeMobileMenu: function() {
+        this.isMobileMenuOpen = false;
+        this.mobileMenuToggle.classList.remove('active');
+        this.headerNav.classList.remove('active');
+        document.body.style.overflow = '';
     },
 
     setupEventListeners: function() {

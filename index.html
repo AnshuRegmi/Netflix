@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#141414">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
     <title>Netflix Clone - Home</title>
 
     <!-- Bootstrap CSS -->
@@ -33,11 +37,18 @@
     <header id="header" class="header">
         <div class="header-container">
             <div class="header-left">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
                 <a href="#" class="header-logo">
                     <img decoding="async" class="header-brand" src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456" alt="Netflix">
                 </a>
 
-                <nav class="header-nav">
+                <nav class="header-nav" id="headerNav">
                     <div class="nav-browse browse-item">
                         <div class="browse-toggle">
                             Browse
@@ -79,7 +90,7 @@
 
                 <div class="header-profile">
                     <div class="profile-toggle">
-                        <span class="profile-avatar">👤</span>
+                        <img class="profile-avatar-img" src="https://i.pinimg.com/564x/1b/a2/e6/1ba2e6d1d4874546c70c91f1024e17fb.jpg" alt="Profile">
                         <i class="fas fa-caret-down profile-arrow"></i>
                     </div>
                     <div class="profile-dropdown">
@@ -100,7 +111,7 @@
                 <div class="hero-video">
                     <iframe
                         id="heroVideo"
-                        src="https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=b9EkMc79ZSU"
+                        src="https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=b9EkMc79ZSU&enablejsapi=1&origin=http://localhost"
                         title="Stranger Things Trailer"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

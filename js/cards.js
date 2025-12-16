@@ -262,9 +262,45 @@ const Cards = {
     },
 
     setupCardEventListeners: function() {
+        // Track active card for mobile tap behavior
+        let activeCard = null;
+        
         // Use event delegation for better performance
         document.addEventListener('click', (e) => {
             const card = e.target.closest('.card');
+            
+            // Handle touch device tap-to-show overlay
+            if (Utils.isTouchDevice()) {
+                // If clicking outside any card, hide all overlays
+                if (!card) {
+                    if (activeCard) {
+                        activeCard.classList.remove('show-overlay');
+                        activeCard = null;
+                    }
+                    return;
+                }
+                
+                // If clicking on action buttons, let them work
+                if (e.target.closest('.card-action-btn')) {
+                    // Continue to handle button clicks below
+                } else if (!card.classList.contains('show-overlay')) {
+                    // First tap - show overlay
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Hide previous active card overlay
+                    if (activeCard && activeCard !== card) {
+                        activeCard.classList.remove('show-overlay');
+                    }
+                    
+                    // Show overlay on this card
+                    card.classList.add('show-overlay');
+                    activeCard = card;
+                    return;
+                }
+                // Second tap - proceed to open modal
+            }
+            
             if (!card) return;
 
             const itemId = parseInt(card.dataset.id);
@@ -298,10 +334,24 @@ const Cards = {
                 return;
             }
 
+            // Dislike button
+            if (e.target.closest('.card-dislike-btn')) {
+                e.stopPropagation();
+                this.handleDislikeClick(item, e.target.closest('.card-dislike-btn'));
+                return;
+            }
+
             // Info button or card click
             if (e.target.closest('.card-info-btn') || e.target.closest('.card')) {
                 e.stopPropagation();
                 console.log('Opening modal for:', item.title);
+                
+                // Hide overlay before opening modal
+                if (activeCard) {
+                    activeCard.classList.remove('show-overlay');
+                    activeCard = null;
+                }
+                
                 Modal.open(item);
                 return;
             }
@@ -345,11 +395,39 @@ const Cards = {
     },
 
     handleLikeClick: function(item, button) {
+        const card = button.closest('.card');
+        const dislikeBtn = card.querySelector('.card-dislike-btn');
+        
         const isLiked = Utils.preferences.toggleLike(item.id);
         
         if (isLiked) {
             button.classList.add('active');
+            // Remove dislike if it was active
+            if (dislikeBtn) {
+                dislikeBtn.classList.remove('active');
+                Utils.preferences.removeDislike(item.id);
+            }
             Utils.showNotification(`Thanks for rating!`, 'success');
+        } else {
+            button.classList.remove('active');
+            Utils.showNotification(`Rating removed`, 'info');
+        }
+    },
+
+    handleDislikeClick: function(item, button) {
+        const card = button.closest('.card');
+        const likeBtn = card.querySelector('.card-like-btn');
+        
+        const isDisliked = Utils.preferences.toggleDislike(item.id);
+        
+        if (isDisliked) {
+            button.classList.add('active');
+            // Remove like if it was active
+            if (likeBtn) {
+                likeBtn.classList.remove('active');
+                Utils.preferences.removeLike(item.id);
+            }
+            Utils.showNotification(`Not for you? Got it!`, 'info');
         } else {
             button.classList.remove('active');
             Utils.showNotification(`Rating removed`, 'info');
@@ -377,6 +455,12 @@ const Cards = {
             const likeBtn = card.querySelector('.card-like-btn');
             if (likeBtn && Utils.preferences.isLiked(itemId)) {
                 likeBtn.classList.add('active');
+            }
+            
+            // Update dislike button
+            const dislikeBtn = card.querySelector('.card-dislike-btn');
+            if (dislikeBtn && Utils.preferences.isDisliked(itemId)) {
+                dislikeBtn.classList.add('active');
             }
         });
     }

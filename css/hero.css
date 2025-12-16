@@ -1,6 +1,4 @@
-/* ==========================================
-   NETFLIX CLONE - HERO SECTION STYLES
-   ========================================== */
+
 
 .hero {
     position: relative;
@@ -88,8 +86,8 @@
 }
 
 .hero-info {
-    max-width: 640px;
-    animation: fadeInUp 1s ease-out;
+    max-width: 480px;
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .hero-topline {
@@ -101,21 +99,21 @@
 }
 
 .hero-title {
-    font-size: clamp(2.8rem, 6vw, 4rem);
-    font-weight: 900;
-    line-height: 1.05;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
     letter-spacing: 0;
-    margin-bottom: var(--spacing-md);
-    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.9);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.9);
     color: var(--netflix-white);
 }
 
 .hero-meta {
     display: flex;
     align-items: center;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-    font-size: var(--font-size-sm);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -139,12 +137,12 @@
 }
 
 .hero-description {
-    font-size: var(--font-size-base);
-    line-height: 1.6;
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
     color: var(--netflix-white);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-    max-width: 640px;
+    max-width: 500px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -161,13 +159,13 @@
 .hero-btn {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md) var(--spacing-2xl);
-    font-size: var(--font-size-lg);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     border-radius: var(--radius-md);
     transition: all var(--transition-base);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .hero-btn:hover {

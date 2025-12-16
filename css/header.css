@@ -3,26 +3,37 @@
    ========================================== */
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: var(--z-fixed);
-    transition: background-color var(--transition-base);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+    transition: background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.8) 25%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.2) 75%,
+        transparent 100%
+    );
+    padding-bottom: 20px;
+    will-change: background-color;
 }
 
 .header.scrolled {
-    background-color: var(--netflix-black);
+    background: rgba(20, 20, 20, 0.98);
     box-shadow: var(--shadow-md);
+    padding-bottom: 0;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing-lg) var(--content-padding);
-    height: auto;
+    padding: var(--spacing-xs) var(--content-padding);
+    height: 56px;
 }
 
 /* Logo */
@@ -36,8 +47,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 70px;
-    min-width: 200px;
+    height: 40px;
+    min-width: 100px;
     transition: opacity var(--transition-base);
 }
 
@@ -46,9 +57,9 @@
 }
 
 .header-brand {
-    height: 135px;
+    height: 32px;
     width: auto;
-    max-width: 450px;
+    max-width: 120px;
     object-fit: contain;
 }
 
@@ -347,7 +358,16 @@
     transition: transform var(--transition-base);
 }
 
-.profile-toggle:hover .profile-avatar {
+.profile-avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.profile-toggle:hover .profile-avatar,
+.profile-toggle:hover .profile-avatar-img {
     transform: scale(1.1);
 }
 

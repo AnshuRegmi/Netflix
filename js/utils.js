@@ -75,11 +75,23 @@ const Utils = {
         
         const fallbackImage = 'https://placehold.co/300x450?text=Poster';
         const imageUrl = item.image || fallbackImage;
+        const title = item.title || 'Unknown Title';
+        const match = item.match || 0;
+        const rating = item.rating || 'NR';
+        const genres = item.genres || '';
 
         card.innerHTML = `
             ${badgeHtml}
-            <img src="${imageUrl}" alt="${item.title}" class="card-image" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://placehold.co/300x450?text=Poster'; this.classList.add('image-fallback');">
+            <img src="${imageUrl}" alt="${title}" class="card-image" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://placehold.co/300x450?text=Poster'; this.classList.add('image-fallback');">
             <div class="card-overlay">
+                <div class="card-info">
+                    <h3 class="card-title">${title}</h3>
+                    <div class="card-meta">
+                        <span class="card-match">${match}% Match</span>
+                        <span class="card-rating">${rating}</span>
+                    </div>
+                    <div class="card-genres">${this.getGenresList(genres)}</div>
+                </div>
                 <div class="card-actions">
                     <button class="card-action-btn card-play-btn" title="Play">
                         <i class="fas fa-play"></i>
@@ -90,17 +102,12 @@ const Utils = {
                     <button class="card-action-btn card-like-btn" title="I like this">
                         <i class="fas fa-thumbs-up"></i>
                     </button>
+                    <button class="card-action-btn card-dislike-btn" title="Not for me">
+                        <i class="fas fa-thumbs-down"></i>
+                    </button>
                     <button class="card-action-btn card-info-btn" title="More Info">
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                </div>
-                <div class="card-info">
-                    <div class="card-meta">
-                        <span class="card-match">${item.match}% Match</span>
-                        <span class="card-rating">${item.rating}</span>
-                    </div>
-                    <h3 class="card-title">${item.title}</h3>
-                    <div class="card-genres">${this.getGenresList(item.genres)}</div>
                 </div>
             </div>
         `;
@@ -316,6 +323,40 @@ const Utils = {
 
         isLiked: function(itemId) {
             return this.getLikedItems().includes(itemId);
+        },
+
+        removeLike: function(itemId) {
+            let liked = this.getLikedItems();
+            liked = liked.filter(id => id !== itemId);
+            Utils.storage.set('likedItems', liked);
+        },
+
+        getDislikedItems: function() {
+            return Utils.storage.get('dislikedItems') || [];
+        },
+
+        toggleDislike: function(itemId) {
+            const disliked = this.getDislikedItems();
+            const index = disliked.indexOf(itemId);
+            
+            if (index > -1) {
+                disliked.splice(index, 1);
+            } else {
+                disliked.push(itemId);
+            }
+            
+            Utils.storage.set('dislikedItems', disliked);
+            return index === -1; // returns true if disliked, false if undisliked
+        },
+
+        isDisliked: function(itemId) {
+            return this.getDislikedItems().includes(itemId);
+        },
+
+        removeDislike: function(itemId) {
+            let disliked = this.getDislikedItems();
+            disliked = disliked.filter(id => id !== itemId);
+            Utils.storage.set('dislikedItems', disliked);
         }
     },
 
