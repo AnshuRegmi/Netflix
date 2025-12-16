@@ -83,6 +83,11 @@
     object-fit: cover;
     object-position: center;
     transition: transform var(--transition-slow);
+    display: block;
+}
+
+.card-image.image-fallback {
+    background-color: #141414;
 }
 
 .card:hover {

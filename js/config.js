@@ -38,7 +38,7 @@ const CONFIG = {
             {
                 id: 3,
                 title: 'The Witcher',
-                image: 'https://image.tmdb.org/t/p/w500/7vjaCdMw15FEbXyLQTVa04URsPm.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg',
                 trailer: 'ndl1W4ltcmg',
                 year: 2019,
                 rating: 'TV-MA',
@@ -80,7 +80,7 @@ const CONFIG = {
             {
                 id: 6,
                 title: 'Bridgerton',
-                image: 'https://image.tmdb.org/t/p/w500/luoKpgVwi1E5nQsi7W0UuKHu2Rq.jpg',
+                image: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p18301540_b_v13_ad.jpg',
                 trailer: 'gpv7ayf_tyE',
                 year: 2020,
                 rating: 'TV-MA',
@@ -94,13 +94,13 @@ const CONFIG = {
             {
                 id: 31,
                 title: 'Ginny & Georgia',
-                image: 'https://image.tmdb.org/t/p/w500/6RA0nBpKgKn7zKsaPY8yFzWHh6h.jpg',
+                image: 'https://resizing.flixster.com/8GH6cW8MeuzNITl2C44yGaKGZ9E=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p19614761_b_v13_aa.jpg',
                 trailer: 'eC-tFJEkLVE',
                 year: 2021,
                 rating: 'TV-14',
                 duration: '2 Seasons',
                 match: 86,
-                description: 'Ginny Miller, an angsty fifteen-year-old, just moved to a quaint New England town and is forced to navigate a new high school.',
+                description: 'Free-spirited Georgia Miller and her daughter Ginny find themselves starting over in a picturesque New England town. But their past threatens everything.',
                 cast: 'Antonia Gentry, Brianne Howey, Scott Speedman',
                 genres: 'Drama, Comedy',
                 tags: 'Teen, Coming-of-Age'
@@ -108,13 +108,13 @@ const CONFIG = {
             {
                 id: 32,
                 title: 'The Diplomat',
-                image: 'https://image.tmdb.org/t/p/w500/rWRJDEiXAqmNw5fkSw3h7pqEfmV.jpg',
+                image: 'https://resizing.flixster.com/m6-mJq18uC-8BqZPL9X6c6BXdIg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMTkyMGQzMGQtM2E3Yi00ZDQ4LWI5MTYtMzEwOTlhOGE4NTg5LmpwZw==',
                 trailer: 'TfLvWu7llQA',
                 year: 2023,
                 rating: 'TV-MA',
                 duration: '1 Season',
                 match: 90,
-                description: 'A U.S. ambassador is quickly thrust into a global crisis when a new satcom satellite explodes on live television.',
+                description: 'In the midst of an international crisis, career diplomat Kate Wyler lands a high-profile job for which she is not suited, with tectonic implications for her marriage and political future.',
                 cast: 'Keri Russell, Rufus Sewell, Ali Ahn',
                 genres: 'Thriller, Drama',
                 tags: 'Political, Suspenseful'
@@ -122,13 +122,13 @@ const CONFIG = {
             {
                 id: 33,
                 title: 'You',
-                image: 'https://image.tmdb.org/t/p/w500/pSFxAkK5H6cJyXI9Vvvl8y3iFaC.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/7bEYwjUvlJW7GerM8GYmqwl4oS3.jpg',
                 trailer: 'bR_1xHgVAAQ',
                 year: 2018,
                 rating: 'TV-MA',
                 duration: '4 Seasons',
                 match: 93,
-                description: 'A brilliant bookstore manager\'s life takes a dark turn when his obsession with an aspiring writer leads him to commit unspeakable acts.',
+                description: 'A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.',
                 cast: 'Penn Badgley, Elizabeth Lail, Ambyr Childers',
                 genres: 'Thriller, Drama, Crime',
                 tags: 'Dark, Psychological'
@@ -136,13 +136,13 @@ const CONFIG = {
             {
                 id: 34,
                 title: 'Firefly Lane',
-                image: 'https://image.tmdb.org/t/p/w500/hAoHZWahJfAyaZPvbHf0Yd7rO5B.jpg',
+                image: 'https://resizing.flixster.com/g1qRyVvJZ0V-xIqUBjKQfBqN4bU=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNmEzZWM3YTktYTk3Yy00YTBmLTk0YzctNWUwYWZhYWY4ZDFlLmpwZw==',
                 trailer: 'LppP2h0qxlI',
                 year: 2021,
                 rating: 'TV-14',
                 duration: '2 Seasons',
                 match: 87,
-                description: 'A chronicle of the unusual friendship between Tully Hart and Kate Mularkey from the 1970s through present.',
+                description: 'For decades, childhood best friends Kate and Tully have weathered life\'s storms together — until a betrayal threatens to break them apart for good.',
                 cast: 'Katherine Heigl, Sarah Chalke, Ali Skovbye',
                 genres: 'Drama, Comedy',
                 tags: 'Emotional, Nostalgic'
@@ -150,13 +150,13 @@ const CONFIG = {
             {
                 id: 35,
                 title: 'Sweet Magnolias',
-                image: 'https://image.tmdb.org/t/p/w500/bVFrgpv3Nzx1qANbPWpvJhfzYJJ.jpg',
+                image: 'https://resizing.flixster.com/BwpTkKhNQi8J1pXk5vHKqNBMXXc=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vYTI4OTYxZjUtM2RmYS00ZjI3LWI0NTMtOTJmNGE0NTU5M2M0LmpwZw==',
                 trailer: '7K-fXdMxIJQ',
                 year: 2020,
                 rating: 'TV-14',
                 duration: '3 Seasons',
                 match: 85,
-                description: 'Three South Carolina women navigate careers, kids, and romantic relationships while supporting each other through life\'s triumphs and tribulations.',
+                description: 'Lifelong friends lift each other up as they juggle relationships, family and careers in the small, Southern town of Serenity.',
                 cast: 'Heather Headley, JoAnna Garcia Swisher, Brooke Elliott',
                 genres: 'Drama',
                 tags: 'Friendship, Southern'
@@ -164,13 +164,13 @@ const CONFIG = {
             {
                 id: 36,
                 title: 'Chilling Adventures of Sabrina',
-                image: 'https://image.tmdb.org/t/p/w500/0fN1Yc3pR7rCQVfNS0ZCRLfJ8m3.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/yxMpoHO0CXP5o9gB7IfsciilQS4.jpg',
                 trailer: 'LgHnXpzKKVw',
                 year: 2018,
                 rating: 'TV-14',
                 duration: '4 Seasons',
                 match: 88,
-                description: 'As her 16th birthday nears, Sabrina must choose between the witch world of her family and her human life.',
+                description: 'Magic and mischief collide as half-human, half-witch Sabrina navigates between two worlds: mortal teen life and her family\'s legacy, the Church of Night.',
                 cast: 'Kiernan Shipka, Ross Lynch, Lucy Davis',
                 genres: 'Fantasy, Horror, Drama',
                 tags: 'Dark, Witches'
@@ -237,7 +237,7 @@ const CONFIG = {
             {
                 id: 11,
                 title: 'Ozark',
-                image: 'https://image.tmdb.org/t/p/w500/m73QN8XcZZdF9BWHXTH2xTImMbc.jpg',
+                image: 'https://resizing.flixster.com/8a5Yee5h_qK2LhJXy-IWPUKuGSI=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNGI2NDQ3NTItNzgzZi00NTY4LWExMGUtYmI4ZTg3MzhmNWU3LmpwZw==',
                 trailer: '5hAXVqrljbs',
                 year: 2017,
                 rating: 'TV-MA',
@@ -265,7 +265,7 @@ const CONFIG = {
             {
                 id: 37,
                 title: 'Mindhunter',
-                image: 'https://image.tmdb.org/t/p/w500/pV8gn8PwYT3VqHZwKN8sU5x9M4F.jpg',
+                image: 'https://resizing.flixster.com/vhEwLDWwD4Ss6xSPFa0a_hVAZco=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzI5NDJhYmItNmMzNS00MzJiLWE0MTktZDFjYTY3M2FhNjgwLmpwZw==',
                 trailer: 'aLEVRYFxQhc',
                 year: 2017,
                 rating: 'TV-MA',
@@ -279,7 +279,7 @@ const CONFIG = {
             {
                 id: 38,
                 title: 'Lucifer',
-                image: 'https://image.tmdb.org/t/p/w500/ec0k9Oj8kB4Hd7SvPfRqJYEPbFl.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/ekZobS8isE6mA53RAiGDG93hBxL.jpg',
                 trailer: 'CnXXmKl-0X0',
                 year: 2015,
                 rating: 'TV-14',
@@ -293,7 +293,7 @@ const CONFIG = {
             {
                 id: 39,
                 title: 'The Boys',
-                image: 'https://image.tmdb.org/t/p/w500/mf5LJ4Mf3mlfaLkCmL4EGx0p2Li.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/2zmTngn1tYC1AvfnrFLhxeD82hz.jpg',
                 trailer: 'PKIaJfR9d0w',
                 year: 2019,
                 rating: 'TV-MA',
@@ -307,7 +307,7 @@ const CONFIG = {
             {
                 id: 40,
                 title: 'Dexter',
-                image: 'https://image.tmdb.org/t/p/w500/2eVHPMPqGrYhzH8zJQLDwL0tPKA.jpg',
+                image: 'https://resizing.flixster.com/8ksxUiME6aqpLBbHO-YaS5ykUxs=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vZDUzYzQzNGUtMDY2ZS00YzcwLWI1M2QtYzJhN2EwZThhNzEwLmpwZw==',
                 trailer: 'tI7LCx3JWqc',
                 year: 2006,
                 rating: 'TV-14',
@@ -321,7 +321,7 @@ const CONFIG = {
             {
                 id: 41,
                 title: 'The Office',
-                image: 'https://image.tmdb.org/t/p/w500/7IWv8zwzKkXiBYxJMHoKfxfDzNJ.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg',
                 trailer: 'ffnM7C2KEEY',
                 year: 2005,
                 rating: 'TV-14',
@@ -335,7 +335,7 @@ const CONFIG = {
             {
                 id: 42,
                 title: 'Friends',
-                image: 'https://image.tmdb.org/t/p/w500/7cf5pmuI7YXjdPVHVcRz5652mVD.jpg',
+                image: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p183156_b_v13_be.jpg',
                 trailer: '2pJmKei2T3I',
                 year: 1994,
                 rating: 'TV-14',
@@ -352,7 +352,7 @@ const CONFIG = {
             {
                 id: 13,
                 title: 'Avatar: The Last Airbender',
-                image: 'https://image.tmdb.org/t/p/w500/9CKBXGFqZpvCoiXUmXJiOQLckdc.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/9RQhVb3r3mCMqYVhLoCu4EvuipP.jpg',
                 trailer: 'wVZUxnYo6_M',
                 year: 2024,
                 rating: 'TV-PG',
@@ -368,7 +368,7 @@ const CONFIG = {
             {
                 id: 14,
                 title: 'Griselda',
-                image: 'https://image.tmdb.org/t/p/w500/p5jxNbjyiYsGwSyMYkXKdsV0cXV.jpg',
+                image: 'https://resizing.flixster.com/ovWCgMthzO9v5KwXzjXD5QSn-g0=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vZTcwNDUxNjItMzk2MS00YmI2LWI3YWEtYzBlNzY5Y2FkMDM0LmpwZw==',
                 trailer: 'VtBKUBhXv1g',
                 year: 2024,
                 rating: 'TV-MA',
@@ -384,7 +384,7 @@ const CONFIG = {
             {
                 id: 15,
                 title: 'The Gentlemen',
-                image: 'https://image.tmdb.org/t/p/w500/tw8jNR6q7panF3EtT8O5VPIIjSf.jpg',
+                image: 'https://resizing.flixster.com/W0TyiB8lWXuVsC89w7G1ljm56Ko=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vOTUzZDU5MzgtODM0Yy00NzJhLTk3ODItMzU2NzU2NjM5Y2E2LmpwZw==',
                 trailer: 'KAZrQ0z1Qqw',
                 year: 2024,
                 rating: 'TV-MA',
@@ -400,7 +400,7 @@ const CONFIG = {
             {
                 id: 16,
                 title: 'One Day',
-                image: 'https://image.tmdb.org/t/p/w500/7wWZUvLzfSHUIXFTtOBXkGEPEIj.jpg',
+                image: 'https://resizing.flixster.com/fFtjPGFsHVEOXZGq2JQXZ4_JAwM=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vZjlmYzU4ODktOGY5MS00YjA5LWIyODgtMzU2ZDFlM2E4YmJhLmpwZw==',
                 trailer: 'gQTf_F5b5gc',
                 year: 2024,
                 rating: 'TV-MA',
@@ -416,7 +416,7 @@ const CONFIG = {
             {
                 id: 17,
                 title: 'Fool Me Once',
-                image: 'https://image.tmdb.org/t/p/w500/jnrH4NFz3H6sBYMJ5vn3RK5N7C6.jpg',
+                image: 'https://resizing.flixster.com/CKgGfJ8R0SLBIOpGGdGdnTyQPME=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vYzU5NzY3NjgtN2JlYy00YmU0LWE5MWQtMzEzZTA1YzMxOWU3LmpwZw==',
                 trailer: 'w-iu67zg8dQ',
                 year: 2024,
                 rating: 'TV-MA',
@@ -432,7 +432,7 @@ const CONFIG = {
             {
                 id: 18,
                 title: 'Obliterated',
-                image: 'https://image.tmdb.org/t/p/w500/feYUqpEAhFAvQCgBWwSaFPPVaE4.jpg',
+                image: 'https://resizing.flixster.com/rnLF5WjULlDyYvjDEe2a_zD8V1g=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzJjYjA0MTctYjYwMi00Y2VhLWJhNTgtNDEwNTYyYmNlZDM5LmpwZw==',
                 trailer: 'rvegTb-xCrs',
                 year: 2023,
                 rating: 'TV-MA',
@@ -446,9 +446,7 @@ const CONFIG = {
                 rank: 6
             },
             {
-                id: 43,
-                title: 'The Night Agent',
-                image: 'https://image.tmdb.org/t/p/w500/6c13i8KLqkPwFzg4MgZPSppCWVG.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/ps2Bw2Mg8bVKe0GKGR3K7Rvwqy7.jpg',
                 trailer: '5jrfmkKGXDc',
                 year: 2023,
                 rating: 'TV-14',
@@ -462,9 +460,7 @@ const CONFIG = {
                 rank: 7
             },
             {
-                id: 44,
-                title: 'The Recruit',
-                image: 'https://image.tmdb.org/t/p/w500/mU9f8v6Z5qN7nnGqMPmJZ3yW9AO.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/bFYBHBvdpL0YoZKM2T9v5PwMvqo.jpg',
                 trailer: 'Oj9YtYJnVcE',
                 year: 2023,
                 rating: 'TV-MA',
@@ -478,9 +474,7 @@ const CONFIG = {
                 rank: 8
             },
             {
-                id: 45,
-                title: 'Nobody Wants This',
-                image: 'https://image.tmdb.org/t/p/w500/eL2E0wgQhSF6P3Y9DfXVLEcIq8g.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/3fBv5eSLuLREz7iRvPqfLj2BzEH.jpg',
                 trailer: 'C_Lxzqkwn0A',
                 year: 2024,
                 rating: 'TV-MA',
@@ -494,9 +488,7 @@ const CONFIG = {
                 rank: 9
             },
             {
-                id: 46,
-                title: 'Carry-On',
-                image: 'https://image.tmdb.org/t/p/w500/dR7LKGDCKt3pD0mGZYy5YXc3Nci.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/3MN5RPKf6zDXPFx4iVxHCNGVZT5.jpg',
                 trailer: 'hAC0qNwmF1w',
                 year: 2024,
                 rating: 'TV-MA',
@@ -515,7 +507,7 @@ const CONFIG = {
             {
                 id: 19,
                 title: '3 Body Problem',
-                image: 'https://image.tmdb.org/t/p/w500/gAuFbzHt14xFGRlgMGIphxBUlC5.jpg',
+                image: 'https://resizing.flixster.com/g5jQo8TxJ6Wv3vE-VY-cO1KkS4U=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNTBiZGY0MzUtNGQxZC00YmJhLTk3MGQtMjFjZGY1MzU5NTM0LmpwZw==',
                 trailer: 'BQJ_C4hqPfM',
                 year: 2024,
                 rating: 'TV-MA',
@@ -530,7 +522,7 @@ const CONFIG = {
             {
                 id: 20,
                 title: 'The Umbrella Academy',
-                image: 'https://image.tmdb.org/t/p/w500/scZlQQYnDVlnpxFTxaIv2g0BWnL.jpg',
+                image: 'https://resizing.flixster.com/yN2I7Zsy1KrELG7OyGmwcPXZUx4=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNGU4YWI4NWYtZDgwNC00MDY3LWI3NjktOGIxYzExZGVmMWM2LmpwZw==',
                 trailer: '0DAmWHxeoKw',
                 year: 2019,
                 rating: 'TV-14',
@@ -544,7 +536,7 @@ const CONFIG = {
             {
                 id: 21,
                 title: 'The Sandman',
-                image: 'https://image.tmdb.org/t/p/w500/q54qUrFnlcf8WtgGJLpDT6gPhTb.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/q54qEgagGOYCq5D1903eBVMNkbo.jpg',
                 trailer: 'zxFm5lVG2l4',
                 year: 2022,
                 rating: 'TV-MA',
@@ -558,7 +550,7 @@ const CONFIG = {
             {
                 id: 22,
                 title: 'Beef',
-                image: 'https://image.tmdb.org/t/p/w500/g1FKqCGFVQhqC9EbwYOjQI2LCgL.jpg',
+                image: 'https://resizing.flixster.com/T-Z3QJHF8J1XBNnR8L10MgVX26U=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vN2Y5M2Y3ZDktMjUzZS00MTUzLTgyZTctNjYxMjYzNDg3NDczLmpwZw==',
                 trailer: 'fP1omkuwUuU',
                 year: 2023,
                 rating: 'TV-MA',
@@ -586,7 +578,7 @@ const CONFIG = {
             {
                 id: 24,
                 title: 'Russian Doll',
-                image: 'https://image.tmdb.org/t/p/w500/4JJGUwTmGrp9GziBhqVpYzvbDkh.jpg',
+                image: 'https://resizing.flixster.com/rlT9_hJ6xXtd8I8fDVQswmAE0ZU=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNjUwNWVhZjUtOGE1Yy00ZmViLTllMzUtNTE4ZWYzOWRhZTE5LmpwZw==',
                 trailer: 'YHcKoAMGGvY',
                 year: 2019,
                 rating: 'TV-MA',
@@ -598,9 +590,7 @@ const CONFIG = {
                 tags: 'Quirky, Mind-Bending'
             },
             {
-                id: 47,
-                title: 'Lockwood & Co.',
-                image: 'https://image.tmdb.org/t/p/w500/N0hqG3L1PkJ32F0CW1R1yWwNNxJ.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/oGYKOdANiKMEHvGWPdBRhqHkVt.jpg',
                 trailer: 'TfJHIJ6_FPE',
                 year: 2023,
                 rating: 'TV-PG',
@@ -612,9 +602,7 @@ const CONFIG = {
                 tags: 'Supernatural, Fantasy'
             },
             {
-                id: 48,
-                title: 'The Diplomat',
-                image: 'https://image.tmdb.org/t/p/w500/lpKyqVPKb8t4sYmdgLh4d9xJTlw.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/6zyaHvWJnNv0kWI9SYIPpNpLvpd.jpg',
                 trailer: 'OqIDFcmC3T4',
                 year: 2023,
                 rating: 'TV-MA',
@@ -626,9 +614,7 @@ const CONFIG = {
                 tags: 'Political, Intense'
             },
             {
-                id: 49,
-                title: 'Godless',
-                image: 'https://image.tmdb.org/t/p/w500/lD3RewvJGG8aCBLqGVP4zTY6DkG.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/3LdqAzXe2jmNKPXKIaHYaYZmW7W.jpg',
                 trailer: 'd7K0I6F1j3w',
                 year: 2017,
                 rating: 'TV-MA',
@@ -640,9 +626,7 @@ const CONFIG = {
                 tags: 'Western, Unique'
             },
             {
-                id: 50,
-                title: 'Sweet Home',
-                image: 'https://image.tmdb.org/t/p/w500/kdg2kB1KBYQCY9oCKs3jhFx1sxf.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/fyVmNMPd7GGhCz0hjRH9p75HzP2.jpg',
                 trailer: '_Gvp-cIlgQA',
                 year: 2020,
                 rating: 'TV-MA',
@@ -673,7 +657,7 @@ const CONFIG = {
             {
                 id: 26,
                 title: 'The Gray Man',
-                image: 'https://image.tmdb.org/t/p/w500/5lqJx8V5ODuFbs1winO5IlHng0j.jpg',
+                image: 'https://resizing.flixster.com/yFkSR3vgE5Y3hYYzNY9T4n6CQ0A=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Q2NTdmYzgzLTU4N2UtNGEyOC1iZDcwLWEzYzI0MzJhNzBlZi5qcGc=',
                 trailer: 'BmllggGO4pM',
                 year: 2022,
                 rating: 'PG-13',
@@ -687,7 +671,7 @@ const CONFIG = {
             {
                 id: 27,
                 title: 'Army of the Dead',
-                image: 'https://image.tmdb.org/t/p/w500/z8CExJekGrEThbpMXAmCFvvgoJR.jpg',
+                image: 'https://resizing.flixster.com/dS9K5rZGN6TcLv3RNXK9Y_v2DSI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2YxMjIzMDdjLTQ5YTgtNDRhMy1hZDljLTk3YzJlNjM2ODkxYS5qcGc=',
                 trailer: 'tI1JGPhYBS8',
                 year: 2021,
                 rating: 'R',
@@ -715,7 +699,7 @@ const CONFIG = {
             {
                 id: 29,
                 title: 'Red Notice',
-                image: 'https://image.tmdb.org/t/p/w500/lAXONuqg41NwUMuzMiFvicDET9F.jpg',
+                image: 'https://resizing.flixster.com/7gykGZpx0sqj3M9Jjo5EYi-2EZY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk5ZWY4YTNmLWI4NjktNGQ3Zi05MWY4LTMyYzE5N2Q2MzBjNi5qcGc=',
                 trailer: 'Pj0wz7zu3Ms',
                 year: 2021,
                 rating: 'PG-13',
@@ -729,7 +713,7 @@ const CONFIG = {
             {
                 id: 30,
                 title: '6 Underground',
-                image: 'https://image.tmdb.org/t/p/w500/lnR8xtad2lSKiVKXcz6dGcNxDaP.jpg',
+                image: 'https://resizing.flixster.com/FJqgqAEsn7dDshUPOzG6_rMOJWA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzU1NDZmZjIxLTkyMmItNGIzNS1hZDg3LTExYjc5M2JiZGU4Ni5qcGc=',
                 trailer: 'YLE85RDMkNQ',
                 year: 2019,
                 rating: 'R',
@@ -743,7 +727,7 @@ const CONFIG = {
             {
                 id: 51,
                 title: 'The Adam Project',
-                image: 'https://image.tmdb.org/t/p/w500/mM8P1pPgPl1f5Qy3Hk7LFsn8qPG.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg',
                 trailer: 'I-8b8B7MfDw',
                 year: 2022,
                 rating: 'PG-13',
@@ -757,7 +741,7 @@ const CONFIG = {
             {
                 id: 52,
                 title: 'Gunpowder Milkshake',
-                image: 'https://image.tmdb.org/t/p/w500/7zz6ck5T4kEb5ToNJE7H9U3kVbS.jpg',
+                image: 'https://resizing.flixster.com/B9vqXHEPAUpOLhZCVtRKuBP6YEk=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzY4NjE4MTg1LTQwZjQtNDMzYi1hZDEwLWYzNGFiNDRkYmIzMS5qcGc=',
                 trailer: 'PQ0EL04Fpy0',
                 year: 2021,
                 rating: 'R',
@@ -771,7 +755,7 @@ const CONFIG = {
             {
                 id: 53,
                 title: 'Kate',
-                image: 'https://image.tmdb.org/t/p/w500/fVzkNBDvn4HjU0TT1bbjvtLwz4l.jpg',
+                image: 'https://resizing.flixster.com/DYzGC3iOHVnAf3kxrS_nI7cXjuc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzkyYmJiZTViLTU1ZDgtNDQyMS05NzIwLTNhMjNjOGU3YjgwMi5qcGc=',
                 trailer: '3mRqDQ72Qh8',
                 year: 2021,
                 rating: 'R',
@@ -785,7 +769,7 @@ const CONFIG = {
             {
                 id: 54,
                 title: 'Bullet Train',
-                image: 'https://image.tmdb.org/t/p/w500/qvYFi6omh0c4YGjYt7FpPLjqLFl.jpg',
+                image: 'https://image.tmdb.org/t/p/w500/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg',
                 trailer: 'wtlIqn5v6Ow',
                 year: 2022,
                 rating: 'R',

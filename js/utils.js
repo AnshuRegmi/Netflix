@@ -73,9 +73,12 @@ const Utils = {
             badgeHtml = `<span class="card-badge badge-top10">#${item.rank}</span>`;
         }
         
+        const fallbackImage = 'https://placehold.co/300x450?text=Poster';
+        const imageUrl = item.image || fallbackImage;
+
         card.innerHTML = `
             ${badgeHtml}
-            <img src="${item.image}" alt="${item.title}" class="card-image" loading="lazy">
+            <img src="${imageUrl}" alt="${item.title}" class="card-image" loading="eager" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://placehold.co/300x450?text=Poster'; this.classList.add('image-fallback');">
             <div class="card-overlay">
                 <div class="card-actions">
                     <button class="card-action-btn card-play-btn" title="Play">
@@ -127,19 +130,25 @@ const Utils = {
 
     // Populate content row with cards
     populateRow: function(container, items, isTop10 = false) {
-        // Find existing slider-track instead of creating new one (preserves nav buttons)
+        // Find or create slider-track to ensure rows always render
         let sliderTrack = container.querySelector('.slider-track');
         
         if (!sliderTrack) {
-            const sliderWrapper = container.querySelector('.slider-wrapper');
-            if (sliderWrapper) {
-                sliderTrack = sliderWrapper.querySelector('.slider-track');
+            let sliderWrapper = container.querySelector('.slider-wrapper');
+            if (!sliderWrapper) {
+                sliderWrapper = document.createElement('div');
+                sliderWrapper.className = 'slider-wrapper';
+                // Insert before next/prev nav if present, else append
+                const nextNav = container.querySelector('.slider-nav-next');
+                if (nextNav) {
+                    container.insertBefore(sliderWrapper, nextNav);
+                } else {
+                    container.appendChild(sliderWrapper);
+                }
             }
-        }
-        
-        if (!sliderTrack) {
-            console.warn('slider-track not found in container', container);
-            return;
+            sliderTrack = document.createElement('div');
+            sliderTrack.className = 'slider-track';
+            sliderWrapper.appendChild(sliderTrack);
         }
         
         // Clear only the slider track content, not the entire container

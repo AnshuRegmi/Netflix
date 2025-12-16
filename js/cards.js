@@ -59,6 +59,23 @@ const Cards = {
                     track = wrapper.querySelector('.slider-track');
                 }
             }
+            // Create wrapper/track if missing to guarantee scrolling works
+            if (!track) {
+                let wrapper = container.querySelector('.slider-wrapper');
+                if (!wrapper) {
+                    wrapper = document.createElement('div');
+                    wrapper.className = 'slider-wrapper';
+                    const nextNav = container.querySelector('.slider-nav-next');
+                    if (nextNav) {
+                        container.insertBefore(wrapper, nextNav);
+                    } else {
+                        container.appendChild(wrapper);
+                    }
+                }
+                track = document.createElement('div');
+                track.className = 'slider-track';
+                wrapper.appendChild(track);
+            }
             
             const prevBtn = container.querySelector('.slider-nav-prev');
             const nextBtn = container.querySelector('.slider-nav-next');
@@ -293,9 +310,14 @@ const Cards = {
         // Hover effects for desktop
         if (!Utils.isTouchDevice()) {
             document.addEventListener('mouseenter', (e) => {
-                const card = e.target.closest('.card');
-                if (card) {
-                    this.handleCardHover(card);
+                // Add polyfill for closest() if not supported
+                let target = e.target;
+                while (target) {
+                    if (target.classList && target.classList.contains('card')) {
+                        this.handleCardHover(target);
+                        return;
+                    }
+                    target = target.parentElement;
                 }
             }, true);
         }

@@ -26,6 +26,7 @@ body {
     color: var(--netflix-white);
     background-color: var(--netflix-black);
     min-height: 100vh;
+    overflow-y: auto;
 }
 
 body.modal-open {

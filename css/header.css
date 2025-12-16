@@ -185,9 +185,12 @@
     color: var(--netflix-white);
     font-size: var(--font-size-lg);
     transition: color var(--transition-base);
-}
-
-.search-btn:hover {
+    color: var(--netflix-white);
+    opacity: 0.95;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+    font-size: 1.125rem;
+    font-weight: 600;
     color: var(--netflix-gray-300);
 }
 
