@@ -1,6 +1,3 @@
-// ==========================================
-// NETFLIX CLONE - UTILITY FUNCTIONS
-// ==========================================
 
 const Utils = {
     // Debounce function for performance optimization

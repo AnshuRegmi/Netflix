@@ -882,3 +882,56 @@ This project is for educational purposes only. Netflix is a registered trademark
 <p align="center">
   <a href="#netflix-clone---complete-project-documentation">Back to Top</a>
 </p>
+
+---
+
+## Appendix: Elaborated AI Assistance Prompts
+
+These are detailed versions of prompts used to refine the project while keeping core implementation authored by me. Each prompt specifies context, the ask, and expected deliverables.
+
+### Initial Setup & Structure Help
+- **Organize CSS files:** Review existing styles in [css/variables.css](css/variables.css), [css/global.css](css/global.css), [css/header.css](css/header.css), [css/hero.css](css/hero.css), [css/cards.css](css/cards.css), [css/modal.css](css/modal.css), [css/footer.css](css/footer.css), [css/responsive.css](css/responsive.css); propose a clear load order and file responsibilities. Deliver a short rationale per file, suggested naming conventions (BEM-like), and a checklist to avoid duplication.
+- **Best folder structure:** Suggest a scalable folder layout for a streaming site, covering assets (images/fonts), components, and JS modules. Include where to store content data (see [js/config.js](js/config.js)) and guidelines for future features (e.g., `assets/`, `components/`, `data/`).
+- **Split JavaScript modules:** Recommend boundaries between `main.js`, `hero.js`, `cards.js`, `modal.js`, `utils.js`. Define public APIs and init order, note event delegation points, and call out any potential cyclic dependencies to avoid.
+
+### Styling & Design Help
+- **Hero section polish:** Based on [css/hero.css](css/hero.css) and [js/hero.js](js/hero.js), suggest gradient overlays, typographic scale, spacing, and button styles to match Netflix’s look. Provide CSS tokens and minimal changes that improve readability over video.
+- **Gradient overlay for banner:** Provide a gradient spec with color stops, opacity ramp, and fallback if `backdrop-filter` isn’t available. Deliver a copy-paste CSS block and guidance on where to apply it in `.hero-overlay`.
+- **Card hover zoom effect:** Improve `.card:hover` behavior in [css/cards.css](css/cards.css): balanced `transform`, `box-shadow`, z-index handling, and stable layout (no reflow). Include before/after values and reasons for easing choices.
+- **Footer professionalism:** Review [css/footer.css](css/footer.css) layout and spacing; propose grid columns, link grouping, and visual hierarchy. Provide a small style patch and accessibility tweaks (contrast, focus states).
+- **CSS variables for dark theme:** Expand [css/variables.css](css/variables.css) with a dark palette and optional theme namespace; outline how to toggle themes via a root class without breaking existing styles.
+
+### JavaScript Functionality
+- **Add carousel/slider to cards:** Using [js/cards.js](js/cards.js), explain the `translateX` approach on `.slider-track`, compute dynamic `scrollAmount` from actual card width/gap, and keep `prev/next` states accurate at bounds. Deliver a small helper to read computed styles.
+- **Fetch TMDB data and display:** Show how to fetch JSON (titles, posters), map to our `Utils.createCard()` format, handle `onerror` image fallback, and plug the results into `Utils.populateRow()`.
+- **Modal popup on card click:** Wire up `Modal.open(item)` for `.card` clicks, pass full item data (title, image, trailer, metadata), and ensure `Escape` and backdrop close work. Provide a concise event delegation snippet.
+- **Make play button functional:** Tie `.card-play-btn` to either trailer playback (YouTube ID) or a placeholder action (`Utils.showNotification(...)`) while keeping code testable.
+- **Smooth scrolling for rows:** Offer a `scrollBy({ left, behavior: 'smooth' })` variant and compare with `transform: translateX`. Include throttling via `Utils.throttle()` and acceptance criteria for smoothness.
+
+### Responsive Design
+- **Fix layout on mobile:** Audit media queries in [css/responsive.css](css/responsive.css) and card size `clamp()` values. Suggest hiding arrows, enabling `overflow-x: auto` with `scroll-snap-type`, and verifying tap targets.
+- **Add tablet/phone media queries:** Propose breakpoint-specific adjustments for typography, spacing, and card grid; provide a compact checklist for testing common widths (480/576/768/992/1200/1400).
+- **Mobile navigation menu:** Improve hamburger toggle and side drawer behavior in header with clear active states, focus trapping, and backdrop handling.
+
+### Bug Fixes & Improvements
+- **Images not loading:** Implement `onerror` fallback, `preconnect` to TMDB, and optional `IntersectionObserver` lazy loading. Deliver a small utility wrapper for image creation used by `Utils.createCard()`.
+- **Hover effect glitchy:** Diagnose stacking contexts, `transform` and `z-index` interactions, and pointer events. Suggest minimal CSS fixes in [css/cards.css](css/cards.css) to stabilize overlays.
+- **JavaScript function failing:** Provide a debugging flow: reproduce, isolate with console logs, verify selector matches, and check event delegation. Share a short template for logging inputs/outputs.
+- **Performance improvements:** Use `Utils.throttle()`/`debounce()` for wheel/scroll, avoid layout thrash, prefer `transform` updates, and add `will-change`. Define simple success metrics (smoothness perception, no dropped frames).
+
+---
+
+## Appendix: 10 Detailed Slider-Focused Prompts
+
+Practical prompts tailored to our slider pattern:
+- **Slider step computation:** “I’m using `transform: translateX` on `.slider-track` with CSS `gap` and card width via `clamp()`. Help compute a dynamic `scrollAmount` from computed styles and update `prev/next` disabled states at bounds.”
+- **Switch to native scroll:** “Refactor to `wrapper.scrollBy({ left: amount, behavior: 'smooth' })` instead of `translateX`. Preserve mouse wheel, touch swipe, and arrows. Explain trade-offs and transitions.”
+- **Drag with inertia:** “Add desktop click-drag with momentum and edge resistance. Constrain within `[0, maxScroll]`, avoid reflow, and keep release transitions smooth.”
+- **Accessibility + keyboard:** “Make slider keyboard-friendly: arrow keys move card-by-card, Home/End jump to edges, focus stays in-row, `aria-live` for page changes. Provide roles/labels for nav buttons.”
+- **Responsive steps:** “Tie `scrollAmount` to visible cards per breakpoint. Read actual card width/gap from computed styles rather than a hardcoded `300px`.”
+- **Touch gestures with snap:** “On mobile, rely on `.slider-wrapper` native scroll and `scroll-snap-type: x mandatory`; avoid double-handling gestures. Use passive listeners to prevent jank.”
+- **Lazy image loading:** “Implement `IntersectionObserver` to lazy-load `.card-image` with a placeholder; handle `onerror` fallback and prefetch next page on idle.”
+- **Performance hardening:** “Throttle wheel/drag handlers, use `will-change: transform`, and avoid forced reflow. Add a tiny FPS monitor to confirm smoothness.”
+- **RTL support:** “Ensure sliders work in RTL: flip icons and align math with reading order using logical properties; avoid code duplication.”
+- **State + tests:** “Expose slider state (`currentScroll`, `maxScroll`, `visibleCards`) for debugging and create a small harness to simulate clicks/drag/wheel, asserting bounds and nav states.”
+

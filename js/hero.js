@@ -1,6 +1,4 @@
-// ==========================================
-// NETFLIX CLONE - HERO SECTION
-// ==========================================
+
 
 const Hero = {
     video: null,
@@ -14,6 +12,33 @@ const Hero = {
         this.video = document.getElementById('heroVideo');
         this.muteBtn = document.getElementById('muteBtn');
         
+        // Ensure the hero iframe has correct YouTube API params and origin
+        // This fixes cases where a hardcoded origin (e.g., http://localhost)
+        // prevents the IFrame API from accepting mute/unmute commands.
+        if (this.video && this.video.src && this.video.src.includes('youtube.com')) {
+            try {
+                const url = new URL(this.video.src);
+                // Always enable JS API
+                url.searchParams.set('enablejsapi', '1');
+                // Keep playsinline for iOS
+                url.searchParams.set('playsinline', '1');
+                // Correct origin if running over http/https; otherwise remove it
+                const origin = window.location.origin;
+                if (origin && (origin.startsWith('http://') || origin.startsWith('https://'))) {
+                    url.searchParams.set('origin', origin);
+                } else {
+                    url.searchParams.delete('origin');
+                }
+                // Write back updated src only if changed
+                const newSrc = url.toString();
+                if (newSrc !== this.video.src) {
+                    this.video.src = newSrc;
+                }
+            } catch (e) {
+                // If URL parsing fails (e.g., unusual env), proceed without changes
+            }
+        }
+
         this.createTrailerPopup();
         this.setupEventListeners();
         this.loadYouTubeAPI();

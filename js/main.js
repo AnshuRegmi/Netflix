@@ -1,7 +1,3 @@
-// ==========================================
-// NETFLIX CLONE - MAIN APPLICATION
-// ==========================================
-
 // Initialize application
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
